@@ -8,12 +8,10 @@ function get_blob() {
     } catch(err) {}
   }
 
-  var Builder = global.BlobBuilder;
-  if (typeof Builder !== 'function') {
-    Builder = global.WebKitBlobBuilder ||
-              global.MozBlobBuilder ||
-              global.MSBlobBuilder
-  }
+  var Builder = global.BlobBuilder ||
+    global.WebKitBlobBuilder ||
+    global.MozBlobBuilder ||
+    global.MSBlobBuilder
 
   return function(parts, bag) {
     var builder = new Builder
