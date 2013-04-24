@@ -16,6 +16,9 @@
     "dom",
     "api"
   ],
+  "devDependencies": {
+    "tape": "~0.3.3"
+  },
   "author": "Chris Dickinson <chris@neversaw.us>",
   "browser": "./browser.js",
   "license": "MIT"
